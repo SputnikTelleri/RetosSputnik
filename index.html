@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+    <title>Retos Sputnik</title>
+
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
+
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+    <script>
+       var deadline = new Date("May 28, 2020 23:59:59").getTime(); 
+  
+        var x = setInterval(function() { 
+  
+        var now = new Date().getTime(); 
+        var t = deadline - now; 
+        var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+        document.getElementById("day").innerHTML =days ; 
+        document.getElementById("hour").innerHTML =hours; 
+        document.getElementById("minute").innerHTML = minutes;  
+        document.getElementById("second").innerHTML =seconds;  
+        if (t < 0) { 
+                clearInterval(x); 
+                document.getElementById("demo").innerHTML = "EL NUEVO RETO SE SUBIRÁ DENTRO DE POCO"; 
+                document.getElementById("day").innerHTML ='0'; 
+                document.getElementById("hour").innerHTML ='0'; 
+                document.getElementById("minute").innerHTML ='0' ;  
+                document.getElementById("second").innerHTML = '0'; } 
+        }, 1000); 
+
+    </script>
+</head>
+
+<body>
+    <!-- LOGO Y TITULO -->
+    <div class="head"><img src="assets/logo.png" class="icon">
+        <h2>Retos</h2>
+    </div>
+
+    <h1>Cuenta atrás para el siguiente reto</h1> 
+<div id="clockdiv"> 
+  <div> 
+    <span class="days" id="day"></span> 
+    <div class="smalltext">Días</div> 
+  </div> 
+  <div> 
+    <span class="hours" id="hour"></span> 
+    <div class="smalltext">Horas</div> 
+  </div> 
+  <div> 
+    <span class="minutes" id="minute"></span> 
+    <div class="smalltext">Minutos</div> 
+  </div> 
+  <div> 
+    <span class="seconds" id="second"></span> 
+    <div class="smalltext">Segundos</div> 
+  </div> 
+</div> 
+  
+<p id="demo"></p> 
+    
+    <div class="section">
+        <div class="div-block">
+ 
+            <!-- TEXTO -->
+            <div class="rich-text-block w-richtext">
+                <h2>Como participar</h2>
+                <p>Esta vez os traemos una serie de retos que iremos subiendo aproximadamente cada 2 días. Por cómo funciona la página web, puede que los retos tarden un poco en publicarse pese a que el contador llegue a 0.
+                     Tendréis que superar el reto (o mejorarlo) y mandarnos un email con el video a <b>m.garcia@tellerialde.com</b> con vuestro nombre y nº de reto o compartiendo el video en google drive a esa misma dirección de correo. Habrá premios para los mejores videos! <br>  <br>
+                    <b>Buena suerte a tod@s!!</b>
+  
+            </div>
+
+            <a href="reto1.html" class="w-button">Reto 1</a>
+            <br>
+            <a href="proximamente.html" class="w-button">Proximamente</a>
+
+                        <img class="div-block-2" src="./assets/logo.png" alt="">
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
